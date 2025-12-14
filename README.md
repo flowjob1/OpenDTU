@@ -5,6 +5,16 @@
 [![Yarn Linting](https://github.com/tbnobody/OpenDTU/actions/workflows/yarnlint.yml/badge.svg)](https://github.com/tbnobody/OpenDTU/actions/workflows/yarnlint.yml)
 [![Yarn Prettier](https://github.com/tbnobody/OpenDTU/actions/workflows/yarnprettier.yml/badge.svg)](https://github.com/tbnobody/OpenDTU/actions/workflows/yarnprettier.yml)
 
+## Changes to original Repo
+
+This Fork is intended to be used with the flole inverter tool which lets you "pimp" Holymiles and E-Star Inverters to 1000W output power.
+With the unmodded OpenDTU firmware, the output power is not correctly displayed and the settings for maximum power show the old values.
+That value needs to be adapted to reflect the new maximum ouput power.
+Changes can be done in this file:    https://github.com/flowjob1/OpenDTU/blob/master/lib/Hoymiles/src/parser/DevInfoParser.cpp
+
+Adapt the value in the array devInfo for your inverter to match your newly set maxiumum power.
+Then compile the Firmware and flash it to your OpenDTU
+
 ## !! IMPORTANT UPGRADE NOTES !!
 
 If you are upgrading from a version before 15.03.2023 you have to upgrade the partition table of the ESP32. Please follow the [this](docs/UpgradePartition.md) documentation!
